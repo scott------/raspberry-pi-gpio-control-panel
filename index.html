@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>RPI B+ Controls - BCM layout</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script type="text/javascript" src="js/main.js"></script>
+	</head>
+	<body onload="init()">
+		<div id="container">
+			<table>
+				<tr>
+					<td id="heading" colspan="8">Raspberry Pi Model B+ Controller - BCM Layout</td>
+				</tr>
+				<tr>
+					<td id="spacer" colspan="8"></td>
+				</tr>
+				<tr>
+					<!-- Row 1 -->
+					<td class="switch_left"></td>
+					<td class="desc_left">3.3 VDC</td>
+					<td class="pin_num_left">1</td>
+					<td><img class="pin_left" src="img/pin1.png" alt="pin1"></td>
+					<td><img class="pin_right" src="img/redpin.png" alt="redpin"></td>
+					<td class="pin_num_right">2</td>
+					<td class="desc_right">5.0 VDC</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 2 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio2" id="gpio2" onclick="switchGPIO('2');" alt="switch"/></td>
+					<td class="desc_left">GPIO 2</td>
+					<td class="pin_num_left">3</td>
+					<td><img class="pin_left" src="img/bluepin.png" alt="bluepin"></td>
+					<td><img class="pin_right" src="img/redpin.png" alt="redpin"></td>
+					<td class="pin_num_right">4</td>
+					<td class="desc_right">5.0 VDC</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 3 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio3" id="gpio3" onclick="switchGPIO('3');" alt="switch"/></td>
+					<td class="desc_left">GPIO 3</td>
+					<td class="pin_num_left">5</td>
+					<td><img class="pin_left" src="img/bluepin.png" alt="bluepin"></td>
+					<td><img class="pin_right" src="img/blackpin.png" alt="blackpin"></td>
+					<td class="pin_num_right">6</td>
+					<td class="desc_right">Ground</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 4 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio4" id="gpio4" onclick="switchGPIO('4');" alt="switch"/></td>
+					<td class="desc_left">GPIO 4</td>
+					<td class="pin_num_left">7</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="pin7"></td>
+					<td><img class="pin_right" src="img/violetpin.png" alt="pin8"></td>
+					<td class="pin_num_right">8</td>
+					<td class="desc_right">GPIO 14</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio14" id="gpio14" onclick="switchGPIO('14');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 5 -->
+					<td class="switch_left"></td>
+					<td class="desc_left">Ground</td>
+					<td class="pin_num_left">9</td>
+					<td><img class="pin_left" src="img/blackpin.png" alt="blackpin"></td>
+					<td><img class="pin_right" src="img/violetpin.png" alt="violetpin"></td>
+					<td class="pin_num_right">10</td>
+					<td class="desc_right">GPIO 15</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio15" id="gpio15" onclick="switchGPIO('15');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 6 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio17" id="gpio17" onclick="switchGPIO('17');" alt="switch"/></td>
+					<td class="desc_left">GPIO 17</td>
+					<td class="pin_num_left">11</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">12</td>
+					<td class="desc_right">GPIO 18</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio18" id="gpio18" onclick="switchGPIO('18');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 7 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio27" id="gpio27" onclick="switchGPIO('27');" alt="switch"/></td>
+					<td class="desc_left">GPIO 27</td>
+					<td class="pin_num_left">13</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/whitepin.png" alt="whitepin"></td>
+					<td class="pin_num_right">14</td>
+					<td class="desc_right">Ground</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 8 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio22" id="gpio22" onclick="switchGPIO('22');" alt="switch"/></td>
+					<td class="desc_left">GPIO 22</td>
+					<td class="pin_num_left">15</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">16</td>
+					<td class="desc_right">GPIO 23</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio23" id="gpio23" onclick="switchGPIO('23');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 9 -->
+					<td class="switch_left"></td>
+					<td class="desc_left">3.3 VDC</td>
+					<td class="pin_num_left">17</td>
+					<td><img class="pin_left" src="img/orangepin.png" alt="orangepin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">18</td>
+					<td class="desc_right">GPIO 24</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio24" id="gpio24" onclick="switchGPIO('24');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 10 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio10" id="gpio10" onclick="switchGPIO('10');" alt="switch"/></td>
+					<td class="desc_left">GPIO 10</td>
+					<td class="pin_num_left">19</td>
+					<td><img class="pin_left" src="img/purplepin.png" alt="purplepin"></td>
+					<td><img class="pin_right" src="img/blackpin.png" alt="blackpin"></td>
+					<td class="pin_num_right">20</td>
+					<td class="desc_right">Ground</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 10 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio9" id="gpio9" onclick="switchGPIO('9');" alt="switch"/></td>
+					<td class="desc_left">GPIO 9</td>
+					<td class="pin_num_left">21</td>
+					<td><img class="pin_left" src="img/purplepin.png" alt="purplepin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">22</td>
+					<td class="desc_right">GPIO 25</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio25" id="gpio25" onclick="switchGPIO('25');" alt="switch"/></td>
+				</tr>
+				<td class="switch_left"><img src="img/off.png" name="gpio11" id="gpio11" onclick="switchGPIO('11');" alt="switch"/></td>
+				<td class="desc_left">GPIO 11</td>
+				<td class="pin_num_left">23</td>
+				<td><img class="pin_left" src="img/purplepin.png" alt="purplepin"></td>
+				<td><img class="pin_right" src="img/purplepin.png" alt="purplepin"></td>
+				<td class="pin_num_right">24</td>
+				<td class="desc_right">GPIO 8</td>
+				<td class="switch_right"><img src="img/off.png" name="gpio8" id="gpio8" onclick="switchGPIO('8');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 13 -->
+					<td class="switch_left"></td>
+					<td class="desc_left">Ground</td>
+					<td class="pin_num_left">25</td>
+					<td><img class="pin_left" src="img/blackpin.png" alt="blackpin"></td>
+					<td><img class="pin_right" src="img/purplepin.png" alt="purplepin"></td>
+					<td class="pin_num_right">26</td>
+					<td class="desc_right">GPIO 7</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio7" id="gpio7" onclick="switchGPIO('7');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 14 -->
+					<td class="switch_left"></td>
+					<td class="desc_left">SDAO</td>
+					<td class="pin_num_left">27</td>
+					<td><img class="pin_left" src="img/yellowpin.png" alt="yellowpin"></td>
+					<td><img class="pin_right" src="img/yellowpin.png" alt="yellowpin"></td>
+					<td class="pin_num_right">28</td>
+					<td class="desc_right">SCLO</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 15 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio5" id="gpio5" onclick="switchGPIO('5');" alt="switch"/></td>
+					<td class="desc_left">GPIO 5</td>
+					<td class="pin_num_left">29</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/blackpin.png" alt="blackpin"></td>
+					<td class="pin_num_right">30</td>
+					<td class="desc_right">Ground</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 16 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio6" id="gpio6" onclick="switchGPIO('6');" alt="switch"/></td>
+					<td class="desc_left">GPIO 6</td>
+					<td class="pin_num_left">31</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">32</td>
+					<td class="desc_right">GPIO 12</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio12" id="gpio12" onclick="switchGPIO('12');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 17 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio13" id="gpio13" onclick="switchGPIO('13');" alt="switch"/></td>
+					<td class="desc_left">GPIO 13</td>
+					<td class="pin_num_left">33</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/blackpin.png" alt="blackpin"></td>
+					<td class="pin_num_right">34</td>
+					<td class="desc_right">Ground</td>
+					<td class="switch_right"></td>
+				</tr>
+				<tr>
+					<!-- Row 18 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio19" id="gpio19" onclick="switchGPIO('19');" alt="switch"/></td>
+					<td class="desc_left">GPIO 19</td>
+					<td class="pin_num_left">35</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">36</td>
+					<td class="desc_right">GPIO 16</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio16" id="gpio16" onclick="switchGPIO('16');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 19 -->
+					<td class="switch_left"><img src="img/off.png" name="gpio26" id="gpio26" onclick="switchGPIO('26');" alt="switch"/></td>
+					<td class="desc_left">GPIO 26</td>
+					<td class="pin_num_left">37</td>
+					<td><img class="pin_left" src="img/greenpin.png" alt="greenpin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">38</td>
+					<td class="desc_right">GPIO 20</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio20" id="gpio20" onclick="switchGPIO('20');" alt="switch"/></td>
+				</tr>
+				<tr>
+					<!-- Row 20 -->
+					<td class="switch_left"></td>
+					<td class="desc_left">Ground</td>
+					<td class="pin_num_left">39</td>
+					<td><img class="pin_left" src="img/blackpin.png" alt="blackpin"></td>
+					<td><img class="pin_right" src="img/greenpin.png" alt="greenpin"></td>
+					<td class="pin_num_right">40</td>
+					<td class="desc_right">GPIO 21</td>
+					<td class="switch_right"><img src="img/off.png" name="gpio21" id="gpio21" onclick="switchGPIO('21');" alt="switch"/></td>
+				</tr>
+			</table>
+		</div>
+		<!-- end container -->
+		<h3>Activity Log</h3>
+		<div id="log"></div>
+		<button onclick="quit()">
+			Quit
+		</button>
+		<button onclick="reconnect()">
+			Reconnect
+		</button>
+	</body>
+</html>
+
