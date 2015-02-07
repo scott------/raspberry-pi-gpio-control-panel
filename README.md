@@ -6,3 +6,6 @@ In order to do that download server.py to your pi.  Then from a terminal on your
 Then type: sudo python server.py
 Now launch the index.html file on any computer (with the supporting directories included in this project).
 You may need to edit the IP address that we have provided as a default.
+To do this open up the main.js file and find this line:
+var host = "ws://192.168.1.133:8765/";
+Change the IP address to the ip address that matches your Raspberry Pi's IP address.  Be sure to leave the port 8765.
